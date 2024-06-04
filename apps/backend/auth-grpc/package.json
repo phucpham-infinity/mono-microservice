@@ -1,0 +1,49 @@
+{
+  "name": "be-auth-grpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:prod && cross-env NODE_ENV=production node dist/server.js",
+    "dev": "cross-env NODE_ENV=development nodemon",
+    "build:prod": "cross-env NODE_ENV=production swc src -d dist --source-maps --copy-files",
+    "build:dev": "cross-env NODE_ENV=development swc src -d dist --source-maps --copy-files"
+  },
+  "keywords": [],
+  "author": "phucpham",
+  "license": "ISC",
+  "dependencies": {
+    "@bufbuild/protobuf": "^1.10.0",
+    "@connectrpc/connect": "^1.4.0",
+    "@connectrpc/connect-fastify": "^1.4.0",
+    "@connectrpc/connect-node": "^1.4.0",
+    "@grpc/grpc-js": "^1.10.8",
+    "@grpc/proto-loader": "^0.7.13",
+    "@repo/grpc": "workspace:*",
+    "bcrypt": "^5.1.1",
+    "dotenv": "^16.4.5",
+    "fastify": "^4.27.0"
+  },
+  "devDependencies": {
+    "@swc/cli": "^0.3.12",
+    "@swc/core": "^1.5.24",
+    "@swc/helpers": "^0.5.11",
+    "@types/bcrypt": "^5.0.2",
+    "@types/node": "^20.11.24",
+    "@typescript-eslint/eslint-plugin": "^7.1.0",
+    "@typescript-eslint/parser": "^7.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-import": "^2.29.1",
+    "grpc-tools": "^1.12.4",
+    "grpc_tools_node_protoc_ts": "^5.3.3",
+    "nodemon": "^3.1.2",
+    "prettier": "^3.2.5",
+    "protoc-gen-ts": "^0.8.7",
+    "ts-node": "^10.9.2",
+    "tsc-alias": "^1.8.10",
+    "tsconfig-paths": "^4.2.0",
+    "typescript": "^5.3.3"
+  }
+}

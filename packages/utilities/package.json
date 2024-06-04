@@ -1,0 +1,14 @@
+{
+  "name": "@repo/utilities",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {},
+  "exports": {
+    "./src": "./src/index.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.24",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {}
+}
