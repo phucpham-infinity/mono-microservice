@@ -1,5 +1,5 @@
 {
-  "name": "@repo/schemas",
+  "name": "@repo/database",
   "version": "0.0.0",
   "private": true,
   "scripts": {},
@@ -8,7 +8,11 @@
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "@types/pg": "^8.11.6",
+    "drizzle-kit": "^0.22.1",
     "drizzle-orm": "^0.31.0",
-    "typescript": "^5.3.3"
+    "pg": "^8.11.5",
+    "typescript": "^5.3.3",
+    "@repo/common": "workspace:*"
   }
 }

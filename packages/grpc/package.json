@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "gen": "buf generate proto"
+    "buf:gen": "buf generate proto",
+    "buf:lint": "buf lint"
   },
   "exports": {
     "./gen": "./gen/index.ts"

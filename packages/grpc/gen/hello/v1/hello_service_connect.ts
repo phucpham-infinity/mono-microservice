@@ -3,8 +3,8 @@
 /* eslint-disable */
 // @ts-nocheck
 
-import { SayHelloRequest, SayHelloResponse } from './hello_service_pb';
-import { MethodKind } from '@bufbuild/protobuf';
+import { SayHelloRequest, SayHelloResponse } from "./hello_service_pb.js";
+import { MethodKind } from "@bufbuild/protobuf";
 
 /**
  * The greeting service definition.
@@ -12,7 +12,7 @@ import { MethodKind } from '@bufbuild/protobuf';
  * @generated from service proto.services.hello.v1.GreeterService
  */
 export const GreeterService = {
-  typeName: 'proto.services.hello.v1.GreeterService',
+  typeName: "proto.services.hello.v1.GreeterService",
   methods: {
     /**
      * Sends a greeting
@@ -20,10 +20,11 @@ export const GreeterService = {
      * @generated from rpc proto.services.hello.v1.GreeterService.SayHello
      */
     sayHello: {
-      name: 'SayHello',
+      name: "SayHello",
       I: SayHelloRequest,
       O: SayHelloResponse,
-      kind: MethodKind.Unary
-    }
+      kind: MethodKind.Unary,
+    },
   }
 } as const;
+

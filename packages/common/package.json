@@ -1,14 +1,15 @@
 {
-  "name": "@repo/orm",
+  "name": "@repo/common",
   "version": "0.0.0",
   "private": true,
   "scripts": {},
   "exports": {
-    "./src": "./src/index.ts"
+    "./src/configs": "./src/configs/index.ts",
+    "./src/constants": "./src/constants/index.ts"
   },
   "devDependencies": {
     "@types/node": "^20.11.24",
+    "dotenv": "^16.4.5",
     "typescript": "^5.3.3"
-  },
-  "dependencies": {}
+  }
 }
