@@ -1,0 +1,69 @@
+syntax = "proto3";
+
+package proto.services.auth.v1;
+
+// The User message represents a user in the system.
+message User {
+    // The unique identifier of the user.
+    string id = 1;
+    // The username of the user.
+    string username = 2;
+    // The email of the user.
+    string email = 3;
+}
+
+// The LoginRequest message contains login info.
+message LoginRequest {
+    // The username or email for login.
+    string username_or_email = 1;
+    // The password for login.
+    string password = 2;
+}
+
+// The LoginResponse message contains user info and a JWT token.
+message LoginResponse {
+    // The user's information.
+    User user = 1;
+    // The JWT token for the session.
+    string token = 2;
+}
+
+// The SignupRequest message contains signup info.
+message SignupRequest {
+    // The desired username for the new user.
+    string username = 1;
+    // The desired password for the new user.
+    string password = 2;
+    // The email for the new user.
+    string email = 3;
+}
+
+// The SignupResponse message contains user info and a JWT token.
+message SignupResponse {
+    // The new user's information.
+    User user = 1;
+    // The JWT token for the session.
+    string token = 2;
+}
+
+// The GetMeRequest message contains a JWT token.
+message GetMeRequest {
+    // The JWT token of the current session.
+    string token = 1;
+}
+
+// The GetMeResponse message contains user info.
+message GetMeResponse {
+    // The current user's information.
+    User user = 1;
+}
+
+// The AuthService defines the authentication service.
+service AuthService {
+    // Login creates a new session for a user.
+    rpc Login(LoginRequest) returns (LoginResponse) {}
+    // Signup creates a new user and a session for them.
+    rpc Signup(SignupRequest) returns (SignupResponse) {}
+    // GetMe retrieves the information of the current user.
+    rpc GetMe(GetMeRequest) returns (GetMeResponse) {}
+}
